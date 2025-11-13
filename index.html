@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>微信读书 · 多列阅读体验原型</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="reader-header">
+        <div class="page-indicator" id="pageIndicator">第 1 页 / 共 1 页（模拟）</div>
+        <div class="page-controls">
+          <button class="ghost-button" data-action="prev" aria-label="上一页">
+            上一页
+          </button>
+          <button class="primary-button" data-action="next" aria-label="下一页">
+            下一页
+          </button>
+        </div>
+      </header>
+      <main class="reader-main" id="readerMain" tabindex="0">
+        <div class="reader-content" id="readerContent"></div>
+      </main>
+    </div>
+
+    <button class="fab" id="fab" aria-haspopup="true" aria-expanded="false" aria-controls="readingPopover">
+      📖
+    </button>
+
+    <section class="popover" id="readingPopover" role="dialog" aria-modal="false">
+      <header class="popover-header">
+        <p class="eyebrow">WECHAT READING PROTOTYPE</p>
+        <h1>微信读书阅读增强插件</h1>
+        <p class="subtitle">请选择你希望的阅读形态：</p>
+      </header>
+      <div class="mode-list" role="group" aria-label="列数模式">
+        <button class="mode-option" data-columns="1">原始（单列）</button>
+        <button class="mode-option" data-columns="2">2 列阅读</button>
+        <button class="mode-option" data-columns="3">3 列阅读</button>
+      </div>
+      <p class="popover-note">
+        翻页行为在本原型中通过「上一页 / 下一页」按钮模拟。
+      </p>
+    </section>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
