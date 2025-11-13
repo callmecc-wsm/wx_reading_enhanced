@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>微信读书多页插件 - MVP 原型 V2</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="reader-main" id="reader">
+      <h1>微信读书正文区域（模拟）</h1>
+      <p class="intro">
+        以下模拟一篇长文，并在同一页内通过多列排版展示。右下角按钮模拟「浏览器插件」，可以切换单列 / 2 列 / 3 列阅读形态，并通过上一页 /
+        下一页体验翻页。
+      </p>
+
+      <div class="page-indicator" id="page-indicator">第 1 页 / 共 3 页（模拟）</div>
+      <div class="page-controls">
+        <button class="page-btn" id="prev-page">上一页</button>
+        <button class="page-btn" id="next-page">下一页</button>
+      </div>
+
+      <div class="multi-column" id="content"></div>
+    </div>
+
+    <button id="plugin-btn" aria-label="打开微信读书阅读增强插件">📖</button>
+
+    <div id="popover" role="dialog" aria-modal="false">
+      <div id="popover-header">微信读书阅读增强插件</div>
+      <div id="popover-desc">请选择你希望的阅读形态：</div>
+      <button class="mode-btn" data-cols="1">原始（单列）</button>
+      <button class="mode-btn" data-cols="2">2 列阅读</button>
+      <button class="mode-btn _active" data-cols="3">3 列阅读</button>
+      <div class="popover-footer">翻页行为在本原型中通过「上一页 / 下一页」按钮模拟。</div>
+    </div>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
