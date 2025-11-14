@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>微信读书 · 多列阅读增强</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="reader-header">
+        <div class="header-copy">
+          <p class="eyebrow">WECHAT READING PROTOTYPE</p>
+          <h1>微信读书正文区域（模拟）</h1>
+          <p class="intro">
+            以下模拟一篇长文，并在同一页内通过多列排版展示。右下角按钮模拟
+            「浏览器插件」，可以切换单列 / 2 列 / 3 列阅读形态，并通过上一页 /
+            下一页体验翻页。
+          </p>
+        </div>
+        <div class="header-actions">
+          <div class="page-indicator" id="pageIndicator" aria-live="polite">
+            第 1 页 / 共 3 页（模拟）
+          </div>
+          <div class="page-controls" role="group" aria-label="翻页控制">
+            <button class="ghost-button" data-action="prev" aria-label="上一页">
+              上一页
+            </button>
+            <button class="primary-button" data-action="next" aria-label="下一页">
+              下一页
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main class="reader-main" id="readerMain" tabindex="0">
+        <div class="reader-content" id="readerContent"></div>
+      </main>
+    </div>
+
+    <button
+      class="fab"
+      id="fab"
+      aria-label="打开微信读书阅读增强插件"
+      aria-haspopup="true"
+      aria-expanded="false"
+      aria-controls="readingPopover"
+    >
+      📖
+    </button>
+
+    <section class="popover" id="readingPopover" role="dialog" aria-modal="false">
+      <header class="popover-header">
+        <p class="eyebrow">WECHAT READING PROTOTYPE</p>
+        <h2>微信读书阅读增强插件</h2>
+        <p class="subtitle">请选择你希望的阅读形态：</p>
+      </header>
+      <div class="mode-list" role="group" aria-label="列数模式">
+        <button class="mode-option" data-columns="1">原始（单列）</button>
+        <button class="mode-option" data-columns="2">2 列阅读</button>
+        <button class="mode-option" data-columns="3">3 列阅读</button>
+      </div>
+      <p class="popover-note">
+        翻页行为在本原型中通过「上一页 / 下一页」按钮模拟。
+      </p>
+    </section>
+
+    <script src="popup.js" type="module"></script>
+  </body>
+</html>

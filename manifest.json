@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "微信读书阅读增强",
+  "description": "多列 / 多页 / Follow 高亮的微信读书阅读增强示意，作为 Chrome 扩展 Popup 演示。",
+  "version": "1.0.0",
+  "action": {
+    "default_title": "微信读书阅读增强",
+    "default_popup": "popup.html"
+  }
+}
